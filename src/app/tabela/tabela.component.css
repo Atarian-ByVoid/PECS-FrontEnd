@@ -94,19 +94,25 @@ img {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+
+
 .custom-button {
-  background-color: #000000;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-button button {
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s;
-}
+  background-color: #74676767;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
 
-.custom-button:hover {
-  background-color: #45a049;
 }
