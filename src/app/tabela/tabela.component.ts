@@ -1,5 +1,6 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-tabela',
@@ -33,7 +34,19 @@ export class TabelaComponent {
         event.currentIndex);
     }
   }
+  @ViewChild('captureElement') captureElement!: ElementRef;
 
+  captureAndDownload() {
+    const elementToCapture = this.captureElement.nativeElement;
+
+    html2canvas(elementToCapture).then((canvas: HTMLCanvasElement) => {
+      const imgData = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = imgData;
+      link.download = 'captured-screen.png';
+      link.click();
+    });
+  }
 
   // imagens: string[][] = [
   //   ['/assets/teste.jpg', '/assets/img2.jpg', '/assets/img1.jpg', '/assets/img4.jpg', '/assets/img5.jpg'],

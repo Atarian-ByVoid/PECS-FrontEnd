@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { TabelaComponent } from './tabela/tabela.component';
-import { HomeComponent } from './home/home.component';
 import { CadastarCriancaComponent } from './cadastar-crianca/cadastar-crianca.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
+import { TabelaComponent } from './tabela/tabela.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +19,15 @@ import { NavBarComponent } from './material/nav-bar/nav-bar.component';
     TabelaComponent,
     HomeComponent,
     CadastarCriancaComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    DragDropModule
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
