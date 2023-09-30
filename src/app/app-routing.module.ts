@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'tabela', component: TabelaComponent },
   { path: 'home', component: HomeComponent },
   { path: 'cadastar-crianca', component: CadastarCriancaComponent },
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
 
 ];
 
