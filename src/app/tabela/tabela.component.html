@@ -144,11 +144,19 @@
           </div>
         </div>
       </div>
-      <div class="custom-button">
-        <button pButton pRipple label=" Submit" (click)="captureAndDownload() " class="p-button-success">Capturar e
-          Baixar</button>
+
+      <div class="menu-container">
+        <div class="menu-trigger" onmouseover="openMenu()" onmouseout="closeMenu()">
+          <span>Menu</span>
+        </div>
+        <div class="menu">
+          <button pButton pRipple label="Submit" (click)="captureAndDownload()" class="p-button-success">Capturar e
+            Baixar</button>
+          <button class="toggle" (click)="toggleFrame()">Trocar o quadro</button>
+        </div>
       </div>
-      <button class="toggle" (click)="toggleFrame()">Trocar o quadro</button>
+
+
 
 
     </section>

@@ -11,12 +11,7 @@ body {
 }
 
 
-.tables {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 
 
 .container-background {
@@ -149,42 +144,6 @@ img {
 
 
 
-.custom-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.custom-button button {
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  background-color: #74676767;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  font-size: 16px;
-  margin: 4px 2px;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-
-}
-
-.toggle {
-  background-color: #244949;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  font-size: 16px;
-  margin: 4px 2px;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  color: azure;
-}
-
 
 
 /* Botão de download */
@@ -247,4 +206,58 @@ a:hover {
 a:hover+.icon {
   border: 3px solid #2ecc71;
   right: -25%;
+}
+
+
+
+
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-button button {
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  background-color: #74676767;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.toggle {
+  background-color: #244949;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  color: azure;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu:hover {
+  display: block;
 }

@@ -61,6 +61,13 @@ export class TabelaComponent {
   toggleFrame() {
     this.showFrame1 = !this.showFrame1;
   }
+  openMenu() {
+    document.querySelector('.menu')?.classList.add('open');
+  }
+
+  closeMenu() {
+    document.querySelector('.menu')?.classList.remove('open');
+  }
 
 
   // onImageUpload(event: any) {
