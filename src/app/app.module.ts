@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
 import { TabelaComponent } from './tabela/tabela.component';
+import { StyleComponentComponent } from './material/style-component/style-component.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TabelaComponent } from './tabela/tabela.component';
     CadastarCriancaComponent,
     NavBarComponent,
     LoginComponent,
-    ErrorPopupComponent
+    ErrorPopupComponent,
+    StyleComponentComponent
 
   ],
   imports: [

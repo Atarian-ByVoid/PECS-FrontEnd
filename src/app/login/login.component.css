@@ -3,9 +3,12 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
+
 }
 
+
 .wrapper {
+  display: block;
   position: relative;
   width: 400px;
   height: 440px;
@@ -20,6 +23,7 @@
   overflow: hidden;
   transition: transform .5s ease, height .2 ease;
 
+
 }
 
 .wrapper.active-popup {
@@ -33,11 +37,13 @@
 .wrapper .form-box {
   width: 100%;
   padding: 40px;
+
 }
 
 .wrapper .form-box.login {
   transition: transform .18s ease;
   transform: translateX(0);
+
 }
 
 .wrapper.active .form-box.login {
@@ -123,6 +129,7 @@
   text-decoration: underline;
 }
 
+
 .btn {
   width: 100%;
   height: 45px;
@@ -157,46 +164,4 @@
 
 .btn:hover {
   font-weight: bold;
-}
-
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f3f3f3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.loader-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader-logo img {
-  max-width: 500px;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.loader-logo img {
-  max-width: 400px;
-  animation: pulse 2s infinite;
 }

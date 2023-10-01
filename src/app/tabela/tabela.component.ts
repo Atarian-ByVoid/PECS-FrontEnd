@@ -9,19 +9,28 @@ import html2canvas from 'html2canvas';
 })
 export class TabelaComponent {
 
-  rotina: any[] = ['/assets/sunset.png', '/assets/night.png', '/assets/morning.png'];
-
-  listTest: any[] = [];
+  rotina: any[] = ['/assets/morning.png', '/assets/sunset.png', '/assets/night.png',];
   list: any[] = ['/assets/img1.jpg', '/assets/img1.jpg', '/assets/img1.jpg'];
   list2: any[] = ['/assets/img5.jpg', '/assets/img5.jpg', '/assets/img5.jpg'];
   list3: any[] = ['/assets/img7.jpg', '/assets/img7.jpg', '/assets/img7.jpg'];
 
-  onImageUpload(event: any) {
-    const file = event.target.files[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      this.listTest.push(imageUrl);
+  listDiv2: any[] = ['/assets/img3.jpg', '/assets/img3.jpg', '/assets/img3.jpg'];
+  listDiv3: any[] = ['/assets/img2.jpg', '/assets/img2.jpg', '/assets/img2.jpg'];
+  listDiv4: any[] = ['assets/img6.jpg', 'assets/img6.jpg', 'assets/img6.jpg'];
+
+  showFrame1 = true;
+
+
+
+  getImageLabel(url: string): string {
+    if (url === '/assets/morning.png') {
+      return 'Manhã';
+    } else if (url === '/assets/sunset.png') {
+      return 'Tarde';
+    } else if (url === '/assets/night.png') {
+      return 'Noite';
     }
+    return '';
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -47,6 +56,20 @@ export class TabelaComponent {
       link.click();
     });
   }
+
+
+  toggleFrame() {
+    this.showFrame1 = !this.showFrame1;
+  }
+
+
+  // onImageUpload(event: any) {
+  //   const file = event.target.files[0];
+  //   if (file) {
+  //     const imageUrl = URL.createObjectURL(file);
+  //     this.listTest.push(imageUrl);
+  //   }
+  // }
 
   // imagens: string[][] = [
   //   ['/assets/teste.jpg', '/assets/img2.jpg', '/assets/img1.jpg', '/assets/img4.jpg', '/assets/img5.jpg'],
