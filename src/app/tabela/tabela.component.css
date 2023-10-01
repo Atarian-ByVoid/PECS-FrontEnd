@@ -89,6 +89,7 @@ img {
 
 .example-container {
   /* width: 4020px; */
+  overflow-x: auto;
   max-width: 100%;
   margin: 0 25px 25px 0;
   display: list-item;
@@ -117,6 +118,9 @@ img {
   cursor: move;
   background: white;
   font-size: 14px;
+  max-width: 100%;
+  flex: 0 0 calc(50% - 20px);
+  margin: 10px;
 }
 
 .cdk-drag-preview {

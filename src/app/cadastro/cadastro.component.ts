@@ -9,6 +9,9 @@ import { CadastroService } from './cadastro.service';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent {
+
+  constructor(private cadastroService: CadastroService) { }
+
   usuario = {
     email: '',
     senha: '',
@@ -26,7 +29,6 @@ export class CadastroComponent {
   };
 
 
-  constructor(private cadastroService: CadastroService) { }
 
   registrar() {
     this.cadastroService.cadastrarUsuario(this.usuario).subscribe(

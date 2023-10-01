@@ -23,7 +23,7 @@ export class LoginComponent {
       (response) => {
         if (response) {
 
-          this.router.navigate(['/tabela'])
+          this.router.navigate(['/home'])
         }
       },
       (error) => {

@@ -1,6 +1,11 @@
 .container-image {
+  margin-top: 10%;
   text-align: center;
   justify-content: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
 
 }
 

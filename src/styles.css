@@ -24,3 +24,8 @@ html,
 body {
   height: 100%;
 } */
+
+
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
