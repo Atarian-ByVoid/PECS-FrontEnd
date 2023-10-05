@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
-import { ErrorPopupComponent } from '../error-popup/error-popup.component';
+import { ErrorService } from '../error-popup/error-popup.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +15,7 @@ export class LoginComponent {
   senha!: string;
   showError = false;
 
-  constructor(private authService: AuthService, private dialog: MatDialog, private router: Router) { }
+  constructor(private authService: AuthService, private errorService: ErrorService, private router: Router) { }
 
   onLoginSubmit() {
     this.authService.login(this.email, this.senha).subscribe(
@@ -27,19 +26,9 @@ export class LoginComponent {
         }
       },
       (error) => {
-        this.openErrorPopup();
+        this.errorService.openErrorDialog({ message: 'Verifique suas credencias e tente novamente' });
       }
     );
   }
 
-  openErrorPopup() {
-    this.dialog.open(ErrorPopupComponent, {
-      width: '300px',
-      data: {
-        errorMessage: 'Erro no login. Por favor, verifique suas credenciais.'
-      }
-    });
-
-
-  }
 }

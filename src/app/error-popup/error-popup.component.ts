@@ -7,16 +7,20 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./error-popup.component.css']
 })
 export class ErrorPopupComponent {
-
-  message = "Verifique suas credenciais e tente novamente"
+  errorMessage: string | undefined;
   constructor(
     public dialogRef: MatDialogRef<ErrorPopupComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
-  ) { }
+    @Inject(MAT_DIALOG_DATA) public data: { message: string }
+  ) {
+    this.closeAfterTimeout();
+  }
 
   closeAfterTimeout() {
     setTimeout(() => {
       this.dialogRef.close();
     }, 5000);
   }
+
+
+
 }

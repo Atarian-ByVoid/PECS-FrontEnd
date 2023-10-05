@@ -13,12 +13,9 @@ export class TabelaComponent {
   list: any[] = ['/assets/img1.jpg', '/assets/img1.jpg', '/assets/img1.jpg'];
   list2: any[] = ['/assets/img5.jpg', '/assets/img5.jpg', '/assets/img5.jpg'];
   list3: any[] = ['/assets/img7.jpg', '/assets/img7.jpg', '/assets/img7.jpg'];
-
-  listDiv2: any[] = ['/assets/img3.jpg', '/assets/img3.jpg', '/assets/img3.jpg'];
-  listDiv3: any[] = ['/assets/img2.jpg', '/assets/img2.jpg', '/assets/img2.jpg'];
-  listDiv4: any[] = ['assets/img6.jpg', 'assets/img6.jpg', 'assets/img6.jpg'];
-
   showFrame1 = true;
+
+  images: string[] = [];
 
 
 
@@ -56,8 +53,6 @@ export class TabelaComponent {
       link.click();
     });
   }
-
-
   toggleFrame() {
     this.showFrame1 = !this.showFrame1;
   }
@@ -70,13 +65,43 @@ export class TabelaComponent {
   }
 
 
-  // onImageUpload(event: any) {
-  //   const file = event.target.files[0];
-  //   if (file) {
-  //     const imageUrl = URL.createObjectURL(file);
-  //     this.listTest.push(imageUrl);
+
+
+  // rows: number[] = [1, 2, 3];
+  // columns: number[] = [1, 2, 3, 4, 5];
+
+  // images: string[][] = [];
+
+  // getImageUrl(row: number, column: number): string {
+  //   if (this.images[row] && this.images[row][column]) {
+  //     return this.images[row][column];
+  //   } else {
+  //     return 'placeholder.jpg';
   //   }
   // }
+  // selectImage(row: number, column: number): void {
+  //   const imageUrl = prompt('Insira a URL da imagem:');
+  //   if (imageUrl) {
+  //     if (!this.images[row]) {
+  //       this.images[row] = [];
+  //     }
+  //     this.images[row][column] = imageUrl;
+  //   }
+  // }
+
+  // selectImage(rotina: number): void {
+  //   const imageUrl = prompt('Insira a URL da imagem:');
+  //   if (imageUrl) {
+  //     if (!this.images[rotina]) {
+  //       this.images[rotina]
+  //     }
+  //     this.images[rotina] = imageUrl;
+  //   }
+  // }
+
+  // listDiv2: any[] = ['/assets/img3.jpg', '/assets/img3.jpg', '/assets/img3.jpg'];
+  // listDiv3: any[] = ['/assets/img2.jpg', '/assets/img2.jpg', '/assets/img2.jpg'];
+  // listDiv4: any[] = ['assets/img6.jpg', 'assets/img6.jpg', 'assets/img6.jpg'];
 
   // imagens: string[][] = [
   //   ['/assets/teste.jpg', '/assets/img2.jpg', '/assets/img1.jpg', '/assets/img4.jpg', '/assets/img5.jpg'],
@@ -101,6 +126,9 @@ export class TabelaComponent {
   //     );
   //   }
   // }
+
+
+
 
 
 }

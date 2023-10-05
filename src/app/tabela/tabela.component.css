@@ -10,10 +10,6 @@ body {
   padding: 70px;
 }
 
-
-
-
-
 .container-background {
   background: linear-gradient(to right, #244949);
 
@@ -73,7 +69,10 @@ img {
 }
 
 .table-container {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .table {
@@ -83,7 +82,6 @@ img {
 }
 
 .example-container {
-  /* width: 4020px; */
   overflow-x: auto;
   max-width: 100%;
   margin: 0 25px 25px 0;
@@ -146,7 +144,6 @@ img {
 
 
 
-/* Botão de download */
 .wrapper-teste {
   display: flex;
   justify-content: center;
@@ -209,12 +206,16 @@ a:hover+.icon {
 }
 
 
-
-
 .custom-button {
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  vertical-align: top;
   align-items: center;
+  justify-content: space-between;
 }
 
 .custom-button button {

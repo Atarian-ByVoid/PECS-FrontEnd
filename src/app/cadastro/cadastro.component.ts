@@ -1,6 +1,7 @@
-// registro.component.ts
-
 import { Component } from '@angular/core';
+import { Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ErrorService } from '../error-popup/error-popup.service';
 import { CadastroService } from './cadastro.service';
 
 @Component({
@@ -10,10 +11,14 @@ import { CadastroService } from './cadastro.service';
 })
 export class CadastroComponent {
 
-  constructor(private cadastroService: CadastroService) { }
+  constructor(
+    private cadastroService: CadastroService,
+    private router: Router,
+    private errorService: ErrorService
+  ) { }
 
   usuario = {
-    email: '',
+    email: ['', [Validators.required, Validators.email]],
     senha: '',
     nome: '',
     telefone: '',
@@ -28,17 +33,40 @@ export class CadastroComponent {
     gender: 'FEMALE'
   };
 
-
+  mensagensDeErro = {
+    email: 'E-mail é obrigatório e deve ser um e-mail válido.',
+    senha: 'Senha é obrigatória.',
+  };
 
   registrar() {
     this.cadastroService.cadastrarUsuario(this.usuario).subscribe(
       response => {
-        console.log('Usuário registrado com sucesso:', response);
+        if (response) {
+          console.log('Usuário registrado com sucesso:', response);
+
+          this.usuario = {
+            email: [''],
+            senha: '',
+            nome: '',
+            telefone: '',
+            cpf: '',
+            rg: '',
+            dataNascimento: new Date().toISOString(),
+            logradouro: '',
+            uf: '',
+            bairro: '',
+            cidade: '',
+            username: '',
+            gender: 'FEMALE'
+          };
+
+          this.router.navigate(['/login']);
+        }
       },
-      error => {
-        console.error('Erro ao registrar o usuário:', error);
+      (error) => {
+        console.error('Erro no registro:', error);
+        this.errorService.openErrorDialog({ message: 'Verifique suas credenciais e tente novamente' });
       }
     );
   }
 }
-
