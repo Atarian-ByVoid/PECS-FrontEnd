@@ -1,0 +1,36 @@
+<app-nav-bar></app-nav-bar>
+<h2>Meu Perfil</h2>
+
+<div class="profile">
+  <img src="sua_foto.jpg" alt="Foto do perfil">
+  <form>
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" [(ngModel)]="perfil.nome" name="nome">
+
+    <label for="telefone">Telefone</label>
+    <input type="text" id="telefone" [(ngModel)]="perfil.telefone" name="telefone">
+
+    <label for="logradouro">Logradouro</label>
+    <input type="text" id="logradouro" [(ngModel)]="perfil.logradouro" name="logradouro">
+
+    <label for="uf">UF</label>
+    <input type="text" id="uf" [(ngModel)]="perfil.uf" name="uf">
+
+    <label for="bairro">Bairro</label>
+    <input type="text" id="bairro" [(ngModel)]="perfil.bairro" name="bairro">
+
+    <label for="cidade">Cidade</label>
+    <input type="text" id="cidade" [(ngModel)]="perfil.cidade" name="cidade">
+
+    <label for="username">Nome de Usuário</label>
+    <input type="text" id="username" [(ngModel)]="perfil.username" name="username">
+
+    <label for="genero">Gênero</label>
+    <select id="genero" [(ngModel)]="perfil.genero" name="genero">
+      <option value="MASCULINO">Masculino</option>
+      <option value="FEMININO">Feminino</option>
+    </select>
+
+    <button type="submit">Salvar</button>
+  </form>
+</div>

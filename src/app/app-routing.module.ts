@@ -5,6 +5,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
+import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { TabelaComponent } from './tabela/tabela.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'style', component: StyleComponentComponent },
   { path: 'tabela', component: TabelaComponent },
   { path: 'cadastar-crianca', component: CadastarCriancaComponent },
+  { path: 'perfil', component: MeuPerfilComponent },
 ];
 
 @NgModule({

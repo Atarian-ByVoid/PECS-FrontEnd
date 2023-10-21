@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -24,7 +25,7 @@ import { ImageSelectorComponent } from './material/image-selector/image-selector
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
 import { TabelaComponent } from './tabela/tabela.component';
-
+import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { TabelaComponent } from './tabela/tabela.component';
     ErrorPopupComponent,
     StyleComponentComponent,
     ImageSelectorComponent,
+    MeuPerfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { TabelaComponent } from './tabela/tabela.component';
     ReactiveFormsModule,
     MatDialogModule,
     MatTabsModule,
+    MatIconModule,
     RouterModule.forRoot([]),
   ],
   providers: [],

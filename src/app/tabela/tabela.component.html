@@ -2,20 +2,25 @@
   <app-nav-bar></app-nav-bar>
 </div>
 
-<div class="table-container">
-  <table>
-    <tr *ngFor="let row of tableData; let rowIndex = index">
-      <td>
-        <img *ngIf="rowIndex < 3" [src]="staticImages[rowIndex]" alt="Static Image">
-      </td>
-      <td *ngFor="let cell of row; let cellIndex = index" (click)="chooseImage(rowIndex, cellIndex)">
-        <img [src]="cell" alt="Image">
-      </td>
-    </tr>
-  </table>
+<div #captureElement>
+  <div class="table-container">
+    <table>
+      <tr *ngFor="let row of tableData; let rowIndex = index">
+        <td>
+          <img *ngIf="rowIndex < 3" [src]="staticImages[rowIndex]" alt="Static Image">
+        </td>
+        <td *ngFor="let cell of row; let cellIndex = index" (click)="chooseImage(rowIndex, cellIndex)">
+          <img [src]="cell" alt="Image">
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
-
-
+<div class="custom-button">
+  <button pButton pRipple label=" Submit" (click)="captureAndDownload() " class="p-button-success">Capturar e
+    Baixar
+  </button>
+</div>
 
 
 <!-- <div class="table-container">

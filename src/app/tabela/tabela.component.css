@@ -24,6 +24,30 @@ img {
   vertical-align: top;
 }
 
+.custom-button .p-button-success {
+  background: linear-gradient(to bottom, #4CAF50, #45a049);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.custom-button .p-button-success i {
+  margin-right: 10px;
+}
+
+.custom-button .p-button-success:hover {
+  background-color: #45a049;
+  color: white;
+  transform: translate(2px, 2px);
+}
+
 /* .container-background {
   background: linear-gradient(to right, #244949);
 

@@ -4,7 +4,10 @@
   <nav class="navbar">
     <ul>
       <li *ngFor="let route of routes">
-        <a [routerLink]="route.path">{{ route.label }}</a>
+        <a [routerLink]="route.path">
+          <mat-icon *ngIf="route.path === '/perfil'">account_circle</mat-icon>
+          {{ route.label }}
+        </a>
       </li>
     </ul>
   </nav>

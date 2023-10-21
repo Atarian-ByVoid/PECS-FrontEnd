@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import html2canvas from 'html2canvas';
 import { ImageSelectorComponent } from '../material/image-selector/image-selector.component';
 @Component({
   selector: 'app-tabela',
@@ -40,6 +41,24 @@ export class TabelaComponent {
       this.openImageSelector(row, cell);
     }
   }
+
+  @ViewChild('captureElement') captureElement!: ElementRef;
+  captureAndDownload() {
+    const elementToCapture = this.captureElement.nativeElement;
+    html2canvas(elementToCapture).then((canvas: HTMLCanvasElement) => {
+      const imgData = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = imgData;
+      link.download = 'rotina.png';
+      link.click();
+    });
+  }
+  showFrame1 = true;
+
+  toggleFrame() {
+    this.showFrame1 = !this.showFrame1;
+  }
+
   // rotina: any[] = ['/assets/morning.png', '/assets/sunset.png', '/assets/night.png',];
   // list: any[] = ['/assets/img1.jpg', '/assets/img1.jpg', '/assets/img1.jpg'];
   // list2: any[] = ['/assets/img5.jpg', '/assets/img5.jpg', '/assets/img5.jpg'];
@@ -66,17 +85,7 @@ export class TabelaComponent {
   //       event.currentIndex);
   //   }
   // }
-  // @ViewChild('captureElement') captureElement!: ElementRef;
-  // captureAndDownload() {
-  //   const elementToCapture = this.captureElement.nativeElement;
-  //   html2canvas(elementToCapture).then((canvas: HTMLCanvasElement) => {
-  //     const imgData = canvas.toDataURL('image/png');
-  //     const link = document.createElement('a');
-  //     link.href = imgData;
-  //     link.download = 'captured-screen.png';
-  //     link.click();
-  //   });
-  // }
+
   // toggleFrame() {
   //   this.showFrame1 = !this.showFrame1;
   // }
