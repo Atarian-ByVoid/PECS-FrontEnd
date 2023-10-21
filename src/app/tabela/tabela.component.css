@@ -1,8 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
   font-family: Arial, sans-serif;
   background-color: aliceblue;
@@ -10,11 +5,33 @@ body {
   padding: 70px;
 }
 
-.container-background {
+img {
+  width: 200px;
+  height: 200px
+}
+
+.table-container {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.table {
+  display: inline-block;
+  margin: 5px;
+  vertical-align: top;
+}
+
+/* .container-background {
   background: linear-gradient(to right, #244949);
 
 }
-
+.column-container {
+  display: flex;
+  justify-content: space-between;
+}
 .image-container {
   position: relative;
   width: 50%;
@@ -56,32 +73,9 @@ body {
   cursor: move;
   background: rgb(0, 0, 0);
   font-size: 16px;
-}
+} */
 
-img {
-  width: 200px;
-  height: 200px
-}
-
-.column-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.table-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.table {
-  display: inline-block;
-  margin: 5px;
-  vertical-align: top;
-}
-
-.example-container {
+/* .example-container {
   overflow-x: auto;
   max-width: 100%;
   margin: 0 25px 25px 0;
@@ -261,4 +255,4 @@ a:hover+.icon {
 
 .menu:hover {
   display: block;
-}
+} */

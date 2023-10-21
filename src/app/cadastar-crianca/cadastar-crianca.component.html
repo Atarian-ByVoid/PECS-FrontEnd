@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="patient-form-wrapper">
-    <h2>Cadastro de Paciente</h2>
+    <h2 style="color: aliceblue;">Cadastro de Paciente</h2>
     <form class="patient-form" (submit)="cadastrarPaciente()">
       <div class="form-group">
         <label for="nome">Nome:</label>
@@ -18,12 +18,10 @@
           (input)="formatDocumento($event)" required>
       </div>
 
-      <div class=" form-group">
-        <label for="dataDiagnostico">Data de Nascimento:</label>
-        <input matInput [matDatepicker]="datepicker" placeholder="Escolha uma data" id="dataDiagnostico"
-          name="dataDiagnostico" [(ngModel)]="paciente.diagnostico.dataDiagnostico" required />
-        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
-        <mat-datepicker #datepicker></mat-datepicker>
+      <div class="form-group">
+        <input type="date" name="dataDiagnostico" id="dataDiagnostico" class="formbold-form-input"
+          [(ngModel)]="paciente.dataDiagnostico" required />
+        <label for="dataNascimento" class="formbold-form-label"> Data de diagnostico </label>
       </div>
 
       <div class="form-group">

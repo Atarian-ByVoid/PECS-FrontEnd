@@ -1,0 +1,21 @@
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-list img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.image-list img:hover {
+  border: 2px solid #007bff;
+}

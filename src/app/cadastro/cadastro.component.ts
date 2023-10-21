@@ -7,15 +7,14 @@ import { CadastroService } from './cadastro.service';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
-
   constructor(
     private cadastroService: CadastroService,
     private router: Router,
     private errorService: ErrorService
-  ) { }
+  ) {}
 
   usuario = {
     email: ['', [Validators.required, Validators.email]],
@@ -30,7 +29,7 @@ export class CadastroComponent {
     bairro: '',
     cidade: '',
     username: '',
-    gender: 'FEMALE'
+    genero: 'FEMININO',
   };
 
   mensagensDeErro = {
@@ -40,7 +39,7 @@ export class CadastroComponent {
 
   registrar() {
     this.cadastroService.cadastrarUsuario(this.usuario).subscribe(
-      response => {
+      (response) => {
         if (response) {
           console.log('Usuário registrado com sucesso:', response);
 
@@ -57,7 +56,7 @@ export class CadastroComponent {
             bairro: '',
             cidade: '',
             username: '',
-            gender: 'FEMALE'
+            genero: 'FEMININO',
           };
 
           this.router.navigate(['/login']);
@@ -65,7 +64,9 @@ export class CadastroComponent {
       },
       (error) => {
         console.error('Erro no registro:', error);
-        this.errorService.openErrorDialog({ message: 'Verifique suas credenciais e tente novamente' });
+        this.errorService.openErrorDialog({
+          message: 'Verifique suas credenciais e tente novamente',
+        });
       }
     );
   }

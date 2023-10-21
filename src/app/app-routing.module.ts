@@ -6,18 +6,18 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
 import { TabelaComponent } from './tabela/tabela.component';
+
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent, },
+  { path: 'home', component: HomeComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'style', component: StyleComponentComponent },
-  { path: 'tabela', component: TabelaComponent, },
+  { path: 'tabela', component: TabelaComponent },
   { path: 'cadastar-crianca', component: CadastarCriancaComponent },
 ];
 
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes),],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

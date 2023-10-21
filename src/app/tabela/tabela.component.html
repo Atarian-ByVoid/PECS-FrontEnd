@@ -2,6 +2,22 @@
   <app-nav-bar></app-nav-bar>
 </div>
 
+<div class="table-container">
+  <table>
+    <tr *ngFor="let row of tableData; let rowIndex = index">
+      <td>
+        <img *ngIf="rowIndex < 3" [src]="staticImages[rowIndex]" alt="Static Image">
+      </td>
+      <td *ngFor="let cell of row; let cellIndex = index" (click)="chooseImage(rowIndex, cellIndex)">
+        <img [src]="cell" alt="Image">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+
 <!-- <div class="table-container">
   <table class="custom-table">
     <tr *ngFor="let row of rows" class="table-row">
@@ -12,7 +28,7 @@
   </table>
 </div> -->
 
-<div class="table-div-1">
+<!-- <div class="table-div-1">
   <div *ngIf="showFrame1">
     <section class="tables">
 
@@ -75,13 +91,13 @@
           <div class="custom-button">
             <button pButton pRipple label=" Submit" (click)="captureAndDownload() " class="p-button-success">Capturar e
               Baixar</button>
-            <!-- <button class="toggle" (click)="toggleFrame()">Trocar o quadro</button> -->
+            <button class="toggle" (click)="toggleFrame()">Trocar o quadro</button>
           </div>
         </div>
       </div>
     </section>
   </div>
-</div>
+</div> -->
 
 <!-- 
 <div *ngIf="!showFrame1">
