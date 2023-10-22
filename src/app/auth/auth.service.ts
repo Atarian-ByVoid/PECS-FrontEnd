@@ -11,7 +11,7 @@ export class AuthService {
   private token: string | null = null;
   isAuthenticated: boolean = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   login(email: string, senha: string): Observable<any> {
     const loginData = {
@@ -21,17 +21,19 @@ export class AuthService {
 
     const headers = new HttpHeaders({});
 
-    return this.http.post(`${this.baseUrl}/auth/login`, loginData, { headers: headers }).pipe(
-      tap((response: any) => {
-        localStorage.setItem('token', response.token);
-        this.isAuthenticated = true;
-        this.token = response.token;
-      })
-    );
+    return this.http
+      .post(`${this.baseUrl}/auth/login`, loginData, { headers: headers })
+      .pipe(
+        tap((response: any) => {
+          localStorage.setItem('token', response.token);
+          this.isAuthenticated = true;
+          this.token = response.token;
+        })
+      );
   }
 
   isAuthenticatedUser(): boolean {
-    return !!this.token;
+    return !!this.getUserId;
   }
 
   getUserId(): string | null {
