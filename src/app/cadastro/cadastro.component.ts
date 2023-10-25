@@ -3,7 +3,6 @@ import { Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ErrorService } from '../error-popup/error-popup.service';
 import { CadastroService } from './cadastro.service';
-
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
