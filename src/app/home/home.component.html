@@ -1,13 +1,44 @@
 <div class="navbar-container">
   <app-nav-bar></app-nav-bar>
 </div>
+<div class="background">
 
-<div class="container-image">
-  <img [src]="imagemUrl" alt="Minha Imagem" class="image">
-  <p class="texto-image">Cadastre seu filho em nossa plataforma, para que você possa personalizar
-    a tabela de rotina!</p>
 
-  <button class="formbold-btn" routerLink="/cadastar-crianca">
-    Registrar
-  </button>
+  <!-- <div class="container-image">
+    <img [src]="imagemUrl" alt="Minha Imagem" class="image">
+    <p class="texto-image">Cadastre seu filho em nossa plataforma, para que você possa personalizar
+      a tabela de rotina!</p>
+  
+    <button class="formbold-btn" routerLink="/cadastar-crianca">
+      Registrar
+    </button>
+  </div> -->
+  <div class="round-div">
+  </div>
+  <div class="info-container">
+    <img style="width: 60px;" src="assets/logo.png" alt="Logo do Projeto" class="logo">
+    <p>
+      O PECS (Sistema de Comunicação por Troca de Figuras) é um projeto desenvolvido para auxiliar pessoas autistas na
+      comunicação. <br>Este sistema utiliza uma abordagem visual, permitindo que os usuários comuniquem suas
+      necessidades,
+      sentimentos e desejos por meio de figuras e imagens, facilitando a interação e a expressão.
+    </p>
+    <ul>
+      <h4>Equipe de desenolvimento</h4>
+      <li>Carlos Alberto</li>
+      <li>Henrrique</li>
+      <li>Luanna</li>
+      <li>Ingrid</li>
+      <li>Miguel</li>
+    </ul>
+  </div>
+  <div class="logo-container">
+    <img style="width: 70px;" src="assets/autismo.png" alt="Logo do Projeto" class="logo">
+    <img style="width: 70px;" src="assets/fita.png" alt="Logo do Projeto" class="logo">
+    <img style="width: 70px;" src="assets/dia-do-autismo.png" alt="Logo do Projeto" class="logo">
+
+
+  </div>
 </div>
+<app-ticker></app-ticker>
+<app-footer></app-footer>
