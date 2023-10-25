@@ -12,6 +12,7 @@ export class MeuPerfilComponent implements OnInit {
     private perfil: MeuPerfilService,
     private authService: AuthService
   ) {}
+
   userInfo: any = null;
   user: any;
   editing: boolean = false;
@@ -27,14 +28,31 @@ export class MeuPerfilComponent implements OnInit {
       });
     }
   }
+
   toggleEditing() {
     this.editing = !this.editing;
   }
   isEditableField(key: string): boolean {
-    return key === 'nome' || key === 'telefone' || key === 'email';
+    return (
+      key === 'nome' ||
+      key === 'telefone' ||
+      key === 'email' ||
+      key === 'username' ||
+      key === 'cidade' ||
+      key === 'bairro' ||
+      key === 'uf'
+    );
   }
   shouldDisplayField(key: string): boolean {
-    return key === 'nome' || key === 'telefone' || key === 'email';
+    return (
+      key === 'nome' ||
+      key === 'telefone' ||
+      key === 'email' ||
+      key === 'username' ||
+      key === 'cidade' ||
+      key === 'bairro' ||
+      key === 'uf'
+    );
   }
 
   saveChanges() {

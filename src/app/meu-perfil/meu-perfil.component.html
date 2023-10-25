@@ -1,7 +1,7 @@
 <app-nav-bar></app-nav-bar>
 
 <div *ngIf="userInfo" class="user-info">
-  <h2>Informações do Usuário</h2>
+  <h2>Bem vindo {{ userInfo.nome }}</h2>
 
   <ng-container *ngFor="let key of userInfo | keys">
     <div class="user-info__field" *ngIf="shouldDisplayField(key)">
