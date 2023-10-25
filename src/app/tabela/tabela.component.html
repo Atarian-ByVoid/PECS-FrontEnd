@@ -9,18 +9,20 @@
         <td>
           <img *ngIf="rowIndex < 3" [src]="staticImages[rowIndex]" alt="Static Image">
         </td>
-        <td *ngFor="let cell of row; let cellIndex = index" (click)="chooseImage(rowIndex, cellIndex)">
-          <img [src]="cell" alt="Image">
+        <td *ngFor="let cell of row; let cellIndex = index" (click)="chooseImage(rowIndex, cellIndex)"
+          class="responsive-image">
+          <img [src]="cell" alt="Selecione uma imagem">
         </td>
       </tr>
     </table>
   </div>
+  <div class="custom-button">
+    <button pButton pRipple label=" Submit" (click)="captureAndDownload() " class="p-button-success">Capturar e
+      Baixar
+    </button>
+  </div>
 </div>
-<div class="custom-button">
-  <button pButton pRipple label=" Submit" (click)="captureAndDownload() " class="p-button-success">Capturar e
-    Baixar
-  </button>
-</div>
+
 
 
 <!-- <div class="table-container">
