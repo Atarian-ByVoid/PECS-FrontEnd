@@ -1,0 +1,12 @@
+<div class="ticker">
+  <div class="ticker-content">
+    <div class="ticker-message">
+      <img style="width: 40px; background-color: none; border-radius: 10px;" src="assets/suporte.gif"
+        alt="Logo do Projeto" class="logo">
+    </div>
+  </div>
+  <div class="mini-chat">
+    <div class="chat-header">No que podemos te ajudar?</div>
+    <div class="chat-message" *ngFor="let message of messages">{{ message }}</div>
+    <input type="text" class="chat-input" placeholder="Digite sua mensagem..." (keydown.enter)="sendMessage()">
+  </div>
