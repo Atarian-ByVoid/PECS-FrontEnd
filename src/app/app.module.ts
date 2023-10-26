@@ -30,6 +30,7 @@ import { FooterComponent } from './material/footer/footer.component';
 import { ImageSelectorComponent } from './material/image-selector/image-selector.component';
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
+import { TelaInterativaComponent } from './material/tela-interativa/tela-interativa.component';
 import { TickerComponent } from './material/ticker/ticker.component';
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { TabelaComponent } from './tabela/tabela.component';
@@ -51,6 +52,7 @@ import { TabelaComponent } from './tabela/tabela.component';
     FooterComponent,
     TickerComponent,
     CalendarioComponent,
+    TelaInterativaComponent,
   ],
   imports: [
     BrowserModule,

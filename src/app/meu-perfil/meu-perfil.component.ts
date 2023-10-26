@@ -37,10 +37,7 @@ export class MeuPerfilComponent implements OnInit {
       key === 'nome' ||
       key === 'telefone' ||
       key === 'email' ||
-      key === 'username' ||
-      key === 'cidade' ||
-      key === 'bairro' ||
-      key === 'uf'
+      key === 'username'
     );
   }
   shouldDisplayField(key: string): boolean {
@@ -48,10 +45,7 @@ export class MeuPerfilComponent implements OnInit {
       key === 'nome' ||
       key === 'telefone' ||
       key === 'email' ||
-      key === 'username' ||
-      key === 'cidade' ||
-      key === 'bairro' ||
-      key === 'uf'
+      key === 'username'
     );
   }
 

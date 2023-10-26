@@ -49,3 +49,15 @@
 .button-reset:hover {
   background-color: crimson;
 }
+
+.back-icon i {
+  margin-left: 2em;
+  color: black;
+  font-size: 32px;
+  height: 10px;
+  transition: 0.9s;
+}
+
+.back-icon i:hover {
+  color: white;
+}
