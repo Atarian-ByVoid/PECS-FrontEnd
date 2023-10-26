@@ -1,28 +1,32 @@
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+<div class="background">
 
-<form (ngSubmit)="onLoginSubmit()">
-  <div class="container-form-login">
-    <div class="wrapper">
-      <div class="form-box login">
-        <h2>Login</h2>
-        <div class="input-box">
-          <input type="email" name="email" [(ngModel)]="email" required>
-          <label>Email</label>
-        </div>
-        <div class="input-box">
-          <input type="password" name="password" [(ngModel)]="senha" required>
-          <label>Password</label>
-        </div>
-        <div class="remember">
-          <label><input type="checkbox">Remember me</label>
-          <a>Forgot Password?</a>
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <div class="login-register">
-          <p>Don't have an account? <a routerLink="/cadastro" class="register-link">Register</a></p>
+  <form (ngSubmit)="onLoginSubmit()">
+    <div class="round-div">
+    </div>
+    <div class="container-form-login">
+      <div class="wrapper">
+        <div class="form-box login">
+          <h2>Login</h2>
+          <div class="input-box">
+            <input type="email" name="email" [(ngModel)]="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" name="password" [(ngModel)]="senha" required>
+            <label>Password</label>
+          </div>
+          <div class="remember">
+            <label><input type="checkbox">Remember me</label>
+            <a>Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>Don't have an account? <a routerLink="/cadastro" class="register-link">Register</a></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>

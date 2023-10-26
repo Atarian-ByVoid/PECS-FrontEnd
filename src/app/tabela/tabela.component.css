@@ -1,11 +1,179 @@
-body {
-  font-family: Arial, sans-serif;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding: 2rem;
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 4em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.responsive-table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.responsive-table td {
+  padding: 10px;
+  text-align: center;
+  max-width: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.responsive-table img {
+  max-width: 100%;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+td:hover {
+  background-color: #b99595;
+  transition: 0.7s;
+  border-radius: 10px;
+}
+
+
+
+/* 
+.navbar-container-week {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-week-navbar {
+  background-color: #007bff;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  margin-top: 10em;
+  width: 50%;
+  height: 5em;
+  margin-right: 20%;
+  margin-left: 25%;
+  border-radius: 5px;
+}
+
+.custom-week-navbar button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.custom-week-navbar button.selected {
+  background-color: #f0f0f0;
+  color: #000000;
+
+}
+
+.custom-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 1em;
+  margin-left: 45%;
+}
+
+.custom-button .p-button-success {
+  background: linear-gradient(to bottom, #007bff, #007bff);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.custom-button .p-button-success i {
+  margin-right: 10px;
+}
+
+.custom-button .p-button-success:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translate(2px, 2px);
+
+}
+
+@media (max-width: 768px) {
+  .responsive-table img.static-image {
+    max-width: 100%;
+  }
+} */
+
+.navbar-container-week {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10em;
+
+}
+
+.custom-button {
+  text-align: center;
+  margin-top: 4px;
+
+}
+
+.custom-button button {
+  padding: 15px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+
+}
+
+.custom-button .p-button-success:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translate(2px, 2px);
+
+}
+
+.centered-week {
   text-align: center;
 }
+
+.custom-week-navbar button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.custom-week-navbar button.selected {
+  background-color: #e74c3c;
+  transition: 1s;
+}
+
+
+
+h1 {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+/* 
 
 img {
   border-radius: 5px;
@@ -40,44 +208,22 @@ td {
 
 }
 
-td:hover {
-  background-color: #292929;
-  transition: cubic-bezier();
-}
 
-/* ----------------------------- */
 
-.custom-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  margin-top: 2em;
-}
 
-.custom-button .p-button-success {
-  background: linear-gradient(to bottom, #4CAF50, #45a049);
-  border: none;
-  color: white;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  border-radius: 25px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
 
-.custom-button .p-button-success i {
-  margin-right: 10px;
-}
 
-.custom-button .p-button-success:hover {
-  background-color: #45a049;
-  color: white;
-  transform: translate(2px, 2px);
-}
+
+
+
+
+
+
+
+
+
+
+
 
 /* .container-background {
   background: linear-gradient(to right, #244949);

@@ -1,0 +1,32 @@
+.container-calendar {
+  max-width: 50%;
+
+  margin-left: 30%;
+
+  background-color: #3498db;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 10em;
+}
+
+.fc-header-toolbar {
+  background-color: #b89999;
+}
+
+.fc-day {
+  background-color: #f0f0f0;
+}
+
+.fc-event-title {
+  color: #333;
+}
+
+.fc-button {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.fc-today-button {
+  background-color: #27ae60;
+  color: #fff;
+}

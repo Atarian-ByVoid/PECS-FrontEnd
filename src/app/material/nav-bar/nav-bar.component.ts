@@ -12,6 +12,7 @@ export class NavBarComponent {
     { path: '/home', label: 'Home' },
     { path: '/cadastro-crianca', label: 'Criança Cadastrada' },
     { path: '/tabela', label: 'Quadro de Rotina' },
+    { path: '/calendario', label: 'Calendario' },
     { path: '/perfil', label: 'Meu Perfil' },
   ];
 

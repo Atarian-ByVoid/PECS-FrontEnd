@@ -15,6 +15,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { KeysPipe } from 'src/utils/keys-pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CalendarioComponent } from './material/calendario/calendario.component';
 import { FooterComponent } from './material/footer/footer.component';
 import { ImageSelectorComponent } from './material/image-selector/image-selector.component';
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
@@ -48,6 +50,7 @@ import { TabelaComponent } from './tabela/tabela.component';
     KeysPipe,
     FooterComponent,
     TickerComponent,
+    CalendarioComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { TabelaComponent } from './tabela/tabela.component';
     MatTabsModule,
     MatIconModule,
     FontAwesomeModule,
+    FullCalendarModule,
     RouterModule.forRoot([]),
   ],
   providers: [

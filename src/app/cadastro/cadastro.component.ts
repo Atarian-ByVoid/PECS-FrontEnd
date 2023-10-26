@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Genero } from 'src/utils/enums';
 import { ErrorService } from '../error-popup/error-popup.service';
 import { CadastroService } from './cadastro.service';
 @Component({
@@ -14,21 +14,23 @@ export class CadastroComponent {
     private router: Router,
     private errorService: ErrorService
   ) {}
+  generoEnum = Genero;
 
+  generoSelecionado: Genero | undefined;
   usuario = {
-    email: ['', [Validators.required, Validators.email]],
+    email: '',
     senha: '',
     nome: '',
     telefone: '',
-    cpf: '',
-    rg: '',
     dataNascimento: new Date().toISOString(),
-    logradouro: '',
-    uf: '',
-    bairro: '',
-    cidade: '',
     username: '',
-    genero: 'FEMININO',
+    // cpf: '',
+    // rg: '',
+    // logradouro: '',
+    // uf: '',
+    // bairro: '',
+    // cidade: '',
+    // generoSelecionado: Genero.FEMININO,
   };
 
   mensagensDeErro = {
@@ -43,19 +45,19 @@ export class CadastroComponent {
           console.log('Usuário registrado com sucesso:', response);
 
           this.usuario = {
-            email: [''],
+            email: '',
             senha: '',
             nome: '',
             telefone: '',
-            cpf: '',
-            rg: '',
             dataNascimento: new Date().toISOString(),
-            logradouro: '',
-            uf: '',
-            bairro: '',
-            cidade: '',
             username: '',
-            genero: 'FEMININO',
+            // cpf: '',
+            // rg: '',
+            // logradouro: '',
+            // uf: '',
+            // bairro: '',
+            // cidade: '',
+            // generoSelecionado: Genero.FEMININO,
           };
 
           this.router.navigate(['/login']);

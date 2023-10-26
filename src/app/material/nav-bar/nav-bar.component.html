@@ -6,6 +6,10 @@
       <li *ngFor="let route of routes">
         <a [routerLink]="route.path">
           <mat-icon *ngIf="route.path === '/perfil'">account_circle</mat-icon>
+          <mat-icon *ngIf="route.path === '/tabela'">filter_frames</mat-icon>
+          <mat-icon *ngIf="route.path === '/calendario'">calendar_today</mat-icon>
+          <mat-icon *ngIf="route.path === '/cadastro-crianca'">child_care</mat-icon>
+          <mat-icon *ngIf="route.path === '/home'">home</mat-icon>
           {{ route.label }}
         </a>
       </li>

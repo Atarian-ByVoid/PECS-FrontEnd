@@ -3,7 +3,7 @@
 <mat-tab-group>
   <mat-tab label="Feminino">
     <div class="image-list">
-      <div *ngFor="let image of imageOptionsA">
+      <div *ngFor="let image of feminino">
         <img [src]="image" (click)="selectImage(image)">
       </div>
     </div>
@@ -11,7 +11,15 @@
 
   <mat-tab label="Masculino">
     <div class="image-list">
-      <div *ngFor="let image of imageOptionsB">
+      <div *ngFor="let image of masculino">
+        <img [src]="image" (click)="selectImage(image)">
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Outros">
+    <div class="image-list">
+      <div *ngFor="let image of outros">
         <img [src]="image" (click)="selectImage(image)">
       </div>
     </div>

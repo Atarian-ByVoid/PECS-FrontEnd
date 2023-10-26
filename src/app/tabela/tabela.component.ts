@@ -8,29 +8,83 @@ import { ImageSelectorComponent } from '../material/image-selector/image-selecto
   styleUrls: ['./tabela.component.css'],
 })
 export class TabelaComponent {
+  constructor(private dialog: MatDialog) {}
+
   staticImages: string[] = [
     '/assets/morning.png',
     '/assets/sunset.png',
     '/assets/night.png',
   ];
 
-  tableData: string[][] = [
-    ['', '', '', '', '', ''],
-    ['', '', '', '', '', ''],
-    ['', '', '', '', '', ''],
+  // tableData: string[][] = [
+  //   ['', '', '', '', '', ''],
+  //   ['', '', '', '', '', ''],
+  //   ['', '', '', '', '', ''],
+  // ];
+  tableData: string[][][] = [
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
+    [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+    ],
   ];
 
-  constructor(private dialog: MatDialog) {}
+  daysOfWeek: string[] = [
+    'Segunda-Feira',
+    'Terça-Feira',
+    'Quarta-Feira',
+    'Quinta-Feira',
+    'Sexta-Feira',
+    'Sábado',
+    'Domingo',
+  ];
 
+  selectedDayIndex: number = 0;
+  day: string = this.daysOfWeek[this.selectedDayIndex];
+
+  selectDay(index: number) {
+    this.selectedDayIndex = index;
+    this.day = this.daysOfWeek[index]; // Atualiza a variável day com o novo valor
+  }
   openImageSelector(row: number, cell: number) {
-    if (!this.tableData[row][cell]) {
+    if (!this.tableData[this.selectedDayIndex][row][cell]) {
       const dialogRef = this.dialog.open(ImageSelectorComponent, {
         data: { selectedRow: row, selectedCell: cell },
       });
 
       dialogRef.afterClosed().subscribe((selectedImage: string) => {
         if (selectedImage) {
-          this.tableData[row][cell] = selectedImage;
+          this.tableData[this.selectedDayIndex][row][cell] = selectedImage;
         }
       });
     }

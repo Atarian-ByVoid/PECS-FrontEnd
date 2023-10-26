@@ -2,24 +2,38 @@
   <app-nav-bar></app-nav-bar>
 </div>
 
+<div class="navbar-container-week">
+  <div class="custom-week-navbar">
+    <div class="centered-week">
+      <button *ngFor="let day of daysOfWeek; let i = index" (click)="selectDay(i)"
+        [class.selected]="i === selectedDayIndex">
+        {{ day }}
+      </button>
+    </div>
+    <div class="custom-button">
+      <button pButton pRipple label="Submit" (click)="captureAndDownload()" class="p-button-success">Capturar e
+        Baixar</button>
+    </div>
+  </div>
+</div>
 <div #captureElement>
+  <div class="title-rotina">
+    <h1>
+      {{day}}
+    </h1>
+  </div>
   <div class="table-container">
-    <table>
-      <tr *ngFor="let row of tableData; let rowIndex = index">
+    <table class="responsive-table">
+      <tr *ngFor="let row of tableData[selectedDayIndex]; let rowIndex = index">
         <td>
-          <img *ngIf="rowIndex < 3" [src]="staticImages[rowIndex]" alt="Static Image">
+          <img *ngIf="rowIndex < 3" [src]="staticImages[rowIndex]" alt="Static Image" class="static-image">
         </td>
         <td *ngFor="let cell of row; let cellIndex = index" (click)="chooseImage(rowIndex, cellIndex)"
           class="responsive-image">
-          <img [src]="cell" alt="Selecione uma imagem">
+          <img [src]="cell" alt="Selecione uma imagem" (click)="openImageSelector(rowIndex, cellIndex)">
         </td>
       </tr>
     </table>
-  </div>
-  <div class="custom-button">
-    <button pButton pRipple label=" Submit" (click)="captureAndDownload() " class="p-button-success">Capturar e
-      Baixar
-    </button>
   </div>
 </div>
 

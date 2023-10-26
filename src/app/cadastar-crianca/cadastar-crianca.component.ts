@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { GravidadeTEA, SubtipoTEA } from 'src/utils/subtipo-tea.enum';
+import { GravidadeTEA, SubtipoTEA } from 'src/utils/enums';
 import { AuthService } from '../auth/auth.service';
 import { ErrorService } from '../error-popup/error-popup.service';
 import { CadastrarCriancaService } from './cadastar-crianca.service';
 
-
 @Component({
   selector: 'app-cadastar-crianca',
   templateUrl: './cadastar-crianca.component.html',
-  styleUrls: ['./cadastar-crianca.component.css']
+  styleUrls: ['./cadastar-crianca.component.css'],
 })
 export class CadastarCriancaComponent {
-
   paciente: any = {
     idUsuario: '',
     dataNascimento: new Date().toISOString(),
@@ -29,13 +27,11 @@ export class CadastarCriancaComponent {
   subtiposTEA = SubtipoTEA;
   gravidadesTEA = GravidadeTEA;
 
-
   constructor(
     private authService: AuthService,
     private cadastarCriancaService: CadastrarCriancaService,
     private errorService: ErrorService
-  ) { }
-
+  ) {}
 
   formatDocumento(event: any) {
     const input = event.target;
@@ -57,13 +53,13 @@ export class CadastarCriancaComponent {
       this.paciente.idUsuario = userId;
 
       this.cadastarCriancaService.criarPaciente(this.paciente).subscribe(
-        (resposta) => {
-        },
+        (resposta) => {},
         (erro) => {
-          this.errorService.openErrorDialog({ message: 'Erro ao cadastar a criança na plataforma' });
+          this.errorService.openErrorDialog({
+            message: 'Erro ao cadastar a criança na plataforma',
+          });
         }
       );
     }
   }
-
 }

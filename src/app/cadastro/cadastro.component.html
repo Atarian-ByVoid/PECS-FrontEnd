@@ -1,100 +1,63 @@
-<div class="teste">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <h1 class="title">Criar conta</h1>
-  <div class="formbold-main-wrapper">
-    <div class="formbold-form-wrapper">
-      <form (submit)="registrar()">
-        <div class="formbold-input-flex">
-          <div>
-            <input type="text" name="email" id="email" placeholder="E-mail" class="formbold-form-input"
-              [(ngModel)]="usuario.email" required />
-            <label for="email" class="formbold-form-label"> E-mail </label>
-          </div>
-          <div>
-            <input type="password" name="senha" id="senha" placeholder="Senha" class="formbold-form-input"
-              [(ngModel)]="usuario.senha" required />
-            <label for="senha" class="formbold-form-label"> Senha </label>
-          </div>
+<div class="background">
+
+  <div class="container-register">
+    <div class="waves-light"
+      style="height:50px;background-image: url(https://lh5.googleusercontent.com/NplHsFMjyO6ML5EvR9xHtFi-nxa61W58LE1uaPB_c_VnTtnspJnCOzr9uuHcbTdn_ZNGWW8dJA=w400);">
+    </div>
+    <div style="padding:20px;max-width:420px;margin:auto;">
+      <h3 style="text-align:center; font-size: 32px; font-weight: bolder; margin-top: 10px;">Formúlario de Registro
+      </h3>
+      <div style="height:10px;"></div>
+      <form id="register" (ngSubmit)="registrar()">
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <input id="email" name="email" type="email" [(ngModel)]="usuario.email" required>
         </div>
 
-        <div class="formbold-input-flex">
-          <div>
-            <input type="text" name="nome" id="nome" placeholder="Nome" class="formbold-form-input"
-              [(ngModel)]="usuario.nome" required />
-            <label for="nome" class="formbold-form-label"> Nome </label>
-          </div>
-          <div>
-            <input type="text" name="telefone" id="telefone" placeholder="Telefone" class="formbold-form-input"
-              [(ngModel)]="usuario.telefone" required />
-            <label for="telefone" class="formbold-form-label"> Telefone </label>
-          </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="username" name="username" type="text" class="validate" [(ngModel)]="usuario.username">
         </div>
 
-        <div class="formbold-input-flex">
-          <div>
-            <input type="text" name="cpf" id="cpf" placeholder="CPF" class="formbold-form-input"
-              [(ngModel)]="usuario.cpf" required />
-            <label for="cpf" class="formbold-form-label"> CPF </label>
-          </div>
-          <div>
-            <input type="text" name="rg" id="rg" placeholder="RG" class="formbold-form-input" [(ngModel)]="usuario.rg"
-              required />
-            <label for="rg" class="formbold-form-label"> RG </label>
-          </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">lock</i>
+          <input id="senha" name="senha" type="password" class="validate" required [(ngModel)]="usuario.senha">
         </div>
 
-        <div class="formbold-input-flex">
-          <div>
-            <input type="date" name="dataNascimento" id="dataNascimento" class="formbold-form-input"
-              [(ngModel)]="usuario.dataNascimento" required />
-            <label for="dataNascimento" class="formbold-form-label"> Data de Nascimento </label>
-          </div>
-          <div>
-            <input type="text" name="logradouro" id="logradouro" placeholder="Logradouro" class="formbold-form-input"
-              [(ngModel)]="usuario.logradouro" required />
-            <label for="logradouro" class="formbold-form-label"> Logradouro </label>
-          </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="nome" name="nome" type="text" class="validate" required [(ngModel)]="usuario.nome">
         </div>
 
-        <div class="formbold-input-flex">
-          <div>
-            <input type="text" name="uf" id="uf" placeholder="UF" class="formbold-form-input" [(ngModel)]="usuario.uf"
-              required />
-            <label for="uf" class="formbold-form-label"> UF </label>
-          </div>
-          <div>
-            <input type="text" name="bairro" id="bairro" placeholder="Bairro" class="formbold-form-input"
-              [(ngModel)]="usuario.bairro" required />
-            <label for="bairro" class="formbold-form-label"> Bairro </label>
-          </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">date_range</i>
+          <input id="dataNascimento" name="dataNascimento" type="date" class="validate" required
+            [(ngModel)]="usuario.dataNascimento">
         </div>
 
-        <div class="formbold-input-flex">
-          <div>
-            <input type="text" name="cidade" id="cidade" placeholder="Cidade" class="formbold-form-input"
-              [(ngModel)]="usuario.cidade" required />
-            <label for="cidade" class="formbold-form-label"> Cidade </label>
-          </div>
-          <div>
-            <input type="text" name="username" id="username" placeholder="Nome de Usuário" class="formbold-form-input"
-              [(ngModel)]="usuario.username" required />
-            <label for="username" class="formbold-form-label"> Nome de Usuário </label>
-          </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="telefone" name="telefone" type="tel" class="validate" required [(ngModel)]="usuario.telefone">
         </div>
 
-        <div class="formbold-input-flex">
-          <div>
-            <select name="genero" id="genero" class="formbold-form-input" [(ngModel)]="usuario.genero" required>
-              <option value="MASCULINO">Masculino</option>
-              <option value="FEMININO">Feminino</option>
-            </select>
-            <label for="genero" class="formbold-form-label"> Gênero </label>
+        <br />
+        <div class="row">
+          <div class="col s6">
+            <button class="button-reset" type="reset">Reset
+              <i class="material-icons right">settings_backup_restore</i>
+            </button>
+          </div>
+          <div class="col s6">
+            <button class="button-send" type="submit" name="send">Send
+              <i class="material-icons right">send</i>
+            </button>
           </div>
         </div>
-
-        <button class="formbold-btn">
-          Registrar
-        </button>
       </form>
     </div>
   </div>
