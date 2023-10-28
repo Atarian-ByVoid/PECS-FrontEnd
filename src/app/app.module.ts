@@ -31,7 +31,9 @@ import { FooterComponent } from './material/footer/footer.component';
 import { ImageSelectorComponent } from './material/image-selector/image-selector.component';
 import { BoardComponent } from './material/memory-game/board/board.component';
 import { CardComponent } from './material/memory-game/card/card.component';
+import { MusicSimulatorComponent } from './material/music-simulator/music-simulator.component';
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
+import { PaintComponent } from './material/paint/paint.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
 import { TelaInterativaComponent } from './material/tela-interativa/tela-interativa.component';
 import { TickerComponent } from './material/ticker/ticker.component';
@@ -59,6 +61,8 @@ import { TabelaComponent } from './tabela/tabela.component';
     GamesComponent,
     CardComponent,
     BoardComponent,
+    PaintComponent,
+    MusicSimulatorComponent,
   ],
   imports: [
     BrowserModule,

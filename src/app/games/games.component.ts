@@ -12,6 +12,12 @@ export class GamesComponent {
   telaInterativa() {
     this.router.navigate(['/tela-interativa']);
   }
+  pintura() {
+    this.router.navigate(['/pintura']);
+  }
+  simuladoMusical() {
+    this.router.navigate(['/simulado-musical']);
+  }
 
   jogoMemoria() {
     this.router.navigate(['/jogo-memoria']);

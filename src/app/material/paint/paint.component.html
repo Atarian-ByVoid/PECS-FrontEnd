@@ -1,0 +1,10 @@
+<div clss="background"></div>
+<div class="paint-app">
+  <div class="paint-container">
+    <canvas #canvas (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)"
+      (mouseup)="onMouseUp()"></canvas>
+  </div>
+  <div class="color-picker">
+    <input type="color" (input)="onColorChange($event)" [(ngModel)]="selectedColor" />
+  </div>
+</div>
