@@ -16,11 +16,6 @@ export class TabelaComponent {
     '/assets/night.png',
   ];
 
-  // tableData: string[][] = [
-  //   ['', '', '', '', '', ''],
-  //   ['', '', '', '', '', ''],
-  //   ['', '', '', '', '', ''],
-  // ];
   tableData: string[][][] = [
     [
       ['', '', '', '', '', ''],
@@ -74,7 +69,7 @@ export class TabelaComponent {
 
   selectDay(index: number) {
     this.selectedDayIndex = index;
-    this.day = this.daysOfWeek[index]; // Atualiza a variável day com o novo valor
+    this.day = this.daysOfWeek[index];
   }
   openImageSelector(row: number, cell: number) {
     if (!this.tableData[this.selectedDayIndex][row][cell]) {

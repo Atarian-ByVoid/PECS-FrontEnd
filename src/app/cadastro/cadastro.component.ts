@@ -60,7 +60,7 @@ export class CadastroComponent {
             // generoSelecionado: Genero.FEMININO,
           };
 
-          this.router.navigate(['/login']);
+          this.router.navigate(['']);
         }
       },
       (error) => {

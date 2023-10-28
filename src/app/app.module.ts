@@ -23,11 +23,14 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { CadastarCriancaComponent } from './cadastar-crianca/cadastar-crianca.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ErrorPopupComponent } from './error-popup/error-popup.component';
+import { GamesComponent } from './games/games.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CalendarioComponent } from './material/calendario/calendario.component';
 import { FooterComponent } from './material/footer/footer.component';
 import { ImageSelectorComponent } from './material/image-selector/image-selector.component';
+import { BoardComponent } from './material/memory-game/board/board.component';
+import { CardComponent } from './material/memory-game/card/card.component';
 import { NavBarComponent } from './material/nav-bar/nav-bar.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
 import { TelaInterativaComponent } from './material/tela-interativa/tela-interativa.component';
@@ -53,6 +56,9 @@ import { TabelaComponent } from './tabela/tabela.component';
     TickerComponent,
     CalendarioComponent,
     TelaInterativaComponent,
+    GamesComponent,
+    CardComponent,
+    BoardComponent,
   ],
   imports: [
     BrowserModule,
