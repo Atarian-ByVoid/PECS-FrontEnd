@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CalendarioComponent } from './material/calendario/calendario.component';
 import { BoardComponent } from './material/memory-game/board/board.component';
+import { MusicSimulatorComponent } from './material/music-simulator/music-simulator.component';
+import { PaintComponent } from './material/paint/paint.component';
 import { StyleComponentComponent } from './material/style-component/style-component.component';
 import { TelaInterativaComponent } from './material/tela-interativa/tela-interativa.component';
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'tela-interativa', component: TelaInterativaComponent },
   { path: 'games', component: GamesComponent },
   { path: 'jogo-memoria', component: BoardComponent },
+  { path: 'pintura', component: PaintComponent },
+  { path: 'simulado-musical', component: MusicSimulatorComponent },
   { path: 'perfil', component: MeuPerfilComponent, canActivate: [AuthGuard] },
 ];
 
