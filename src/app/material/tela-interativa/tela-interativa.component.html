@@ -1,1 +1,66 @@
-<p>tela-interativa works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="background">
+
+  <div class="container">
+    <div class="quadro-1" style="padding: 8em;">
+      <div class=" conteudo">
+        <img src="assets/tela_interativa/hoje_e.jpg" alt="Static Image" class="imagem-esquerda">
+        <div class="texto-esquerda">
+        </div>
+        <div class="imagem-direita" cdkDrag (cdkDragDropped)="onDrop($event, 1)">
+        </div>
+      </div>
+    </div>
+
+    <div class="quadro-2" style="padding: 8em;">
+      <div class=" conteudo">
+        <img src="assets/tela_interativa/o_dia_esta.png" alt="Static Image" class="imagem-esquerda">
+        <div class="texto-esquerda">
+        </div>
+        <div class="imagem-direita" cdkDrag (cdkDragDropped)="onDrop($event, 1)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-images">
+    <div class="container-imagem-arrastavel">
+      <div cdkDrag class="imagem-arrastavel" *ngFor="let image of diaSemana">
+        <img [src]="image.src" alt="Imagem Arrastável">
+      </div>
+    </div>
+    <div class="container-imagem-arrastavel">
+      <div cdkDrag class="imagem-arrastavel" *ngFor="let image of diaEstado">
+        <img [src]="image.src" alt="Imagem Arrastável">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- <div class="quadro-1" (click)="openImageSelector(1)">
+  <div class="conteudo">
+    <img src="assets/tela_interativa/hoje_e.jpg" alt="Static Image" class="imagem-esquerda">
+
+    <div class="texto-esquerda">
+    </div>
+    <div class="imagem-direita">
+      <img [src]="tableData1" alt="Hoje é">
+    </div>
+  </div>
+</div>
+
+<div class="quadro-2" (click)="openImageSelector(2)">
+  <div class="conteudo">
+    <img src="assets/tela_interativa/o_dia_esta.png" alt="Static Image" class="imagem-esquerda">
+
+    <div class="texto-esquerda">
+    </div>
+    <div class="imagem-direita">
+      <img [src]="tableData2" alt="O dia está">
+    </div>
+  </div>
+</div> -->

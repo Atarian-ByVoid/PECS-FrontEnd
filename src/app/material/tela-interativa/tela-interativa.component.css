@@ -1,0 +1,148 @@
+.background {
+  background-image: url('/assets/games/game_tela_interativa.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 20em;
+
+}
+
+.quadro-1,
+.quadro-2 {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: white;
+  max-width: 50%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+.imagem-direita,
+.imagem-esquerda {
+  flex: 1;
+  padding: 10px;
+  max-width: 30%;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagem-arrastavel {
+  flex: 1;
+  padding: 10px;
+  max-width: 10%;
+}
+
+.container-imagem-arrastavel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.imagem-arrastavel {
+  margin-right: 10px;
+}
+
+.container-images {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  backdrop-filter: blur(20px);
+  background: transparent;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/*
+.quadro-1 {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.quadro-2 {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: aliceblue;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+
+}
+
+.texto-esquerda {
+  flex: 1;
+  padding: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 52px;
+  font-weight: bold;
+
+}
+
+.imagem-direita {
+  flex: 1;
+  padding: 10px;
+  max-width: 20%;
+}
+
+.imagem-esquerda {
+  flex: 1;
+  padding: 10px;
+  max-width: 20%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagem-arrastavel {
+  flex: 1;
+  padding: 10px;
+  max-width: 10%;
+}
+
+.container-imagem-arrastavel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(20px);
+  background: transparent;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.imagem-arrastavel {
+  margin-right: 10px;
+} */
