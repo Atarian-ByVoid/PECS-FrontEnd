@@ -1,0 +1,17 @@
+<app-nav-bar>
+
+</app-nav-bar>
+<div class="background">
+  <div class="board">
+    <div class="card" *ngFor="let card of cards" (click)="flipCard(card)">
+      <div class="card-inner" [ngClass]="{'flipped': card.isFlipped, 'matched': card.isMatched}">
+        <div class="front">
+          <img src="assets/games/safari_cap.png" alt="Card Image">
+        </div>
+        <div class="back">
+          <img [src]="card.isFlipped ? card.value : ''" alt="Card Image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

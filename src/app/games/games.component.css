@@ -1,0 +1,61 @@
+.background {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(7, 7, 113, 1) 21%, rgba(0, 212, 255, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(7, 7, 113, 1) 21%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(7, 7, 113, 1) 21%, rgba(0, 212, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#00d4ff", GradientType=1);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 10em;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+h2 {
+  margin-bottom: 25em;
+  background-color: rgba(240, 248, 255, 0.712);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.377);
+  border-radius: 10px;
+  padding-left: 4px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card {
+  width: 30em;
+  height: 30em;
+  background-color: #e07f7f;
+  border: 1px solid #ddd;
+  margin: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 248, 255, 0.712);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.377);
+  border-radius: 10px;
+
+}
+
+.card:hover {
+  transform: scaleY(1.2);
+  transition: transform 0.3s;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
