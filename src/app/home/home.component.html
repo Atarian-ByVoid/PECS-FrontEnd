@@ -1,10 +1,40 @@
-<div class="navbar-container">
-  <app-nav-bar></app-nav-bar>
+<app-nav-bar></app-nav-bar>
+<video autoplay muted loop id="myVideo">
+  <source src="assets/video/roda.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div id="text">
+
+  <div class="title">
+    <h1>PECS</h1>
+    <p>
+      O PECS (Sistema de Comunicação por Troca de Figuras) é um projeto desenvolvido para auxiliar pessoas autistas na
+      comunicação. <br>Este sistema utiliza uma abordagem visual, permitindo que os usuários comuniquem suas
+      necessidades,
+      sentimentos e desejos por meio de figuras e imagens, facilitando a interação e a expressão.
+    </p>
+  </div>
+  <div class="title-equipe">
+    <ul>
+      <h4>Equipe de desenolvimento</h4>
+      <p>Carlos Alberto - BackEnd/FrontEnd</p>
+      <p>Henrrique - Suporte</p>
+      <p>Luanna - BackEnd</p>
+      <p>Ingrid - BackEnd</p>
+      <p>Miguel - DevOps</p>
+    </ul>
+  </div>
+  <div class="logo-container">
+    <img style="width: 70px;" src="assets/autismo.png" alt="Logo do autismo" class="logo">
+    <img style="width: 70px;" src="assets/fita.png" alt="Logo do autismo" class="logo">
+    <img style="width: 70px;" src="assets/dia-do-autismo.png" alt="Logo do autismo" class="logo">
+  </div>
 </div>
-<div class="background">
+<app-ticker></app-ticker>
 
+<app-footer></app-footer>
 
-  <!-- <div class="container-image">
+<!-- <div class="container-image">
     <img [src]="imagemUrl" alt="Minha Imagem" class="image">
     <p class="texto-image">Cadastre seu filho em nossa plataforma, para que você possa personalizar
       a tabela de rotina!</p>
@@ -13,6 +43,8 @@
       Registrar
     </button>
   </div> -->
+<!-- <div class="background">
+
   <div class="round-div">
   </div>
   <div class="info-container">
@@ -40,5 +72,4 @@
 
   </div>
 </div>
-<app-ticker></app-ticker>
-<app-footer></app-footer>
+-->

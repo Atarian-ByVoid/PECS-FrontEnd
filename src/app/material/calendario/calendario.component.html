@@ -1,5 +1,8 @@
 <app-nav-bar></app-nav-bar>
-<div class="container-calendar">
-  <full-calendar [options]="calendarOptions" (dateClick)="dateClick($event)"
-    (eventClick)="eventClick($event)"></full-calendar>
+
+<div class="background">
+  <div class="container-calendar">
+    <full-calendar [options]="calendarOptions" (dateClick)="dateClick($event)"
+      (eventClick)="eventClick($event)"></full-calendar>
+  </div>
 </div>

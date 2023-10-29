@@ -12,7 +12,6 @@ export class CalendarioComponent implements OnInit {
     plugins: [dayGridPlugin],
     initialView: 'dayGridMonth',
     events: [
-      // Aqui, você pode fornecer os eventos do calendário
       {
         title: 'Evento 1',
         date: '2023-10-25',
@@ -21,7 +20,6 @@ export class CalendarioComponent implements OnInit {
         title: 'Evento 2',
         date: '2023-10-26',
       },
-      // Adicione mais eventos conforme necessário
     ],
   };
 

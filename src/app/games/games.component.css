@@ -23,10 +23,10 @@ h2 {
   background-color: rgba(240, 248, 255, 0.712);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.377);
-  border-radius: 10px;
-  padding-left: 4px;
+  border-radius: 5px;
   font-weight: bold;
   font-size: 20px;
+  padding: 10px;
 }
 
 .card {

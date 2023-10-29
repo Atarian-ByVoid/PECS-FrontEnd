@@ -1,12 +1,15 @@
 .background {
   background-image: url('/assets/games/safari.png');
-  background-color: #4CAF50;
+  background-color: rgb(13, 145, 42);
+  background-color: -moz-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(38, 153, 48, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  background-color: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(38, 153, 48, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  background-color: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(38, 153, 48, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#00d4ff", GradientType=1);
   background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 50;
-  padding: 20em;
+  padding: 30em;
 
 }
 

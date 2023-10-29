@@ -1,112 +1,46 @@
-/* .container-image {
-  margin-top: 10%;
-  text-align: center;
-  justify-content: center;
-  max-width: 100%;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-
-
-}
-
-.image {
-  max-width: 100%;
-  height: auto;
-  margin-top: 30px;
-}
-
-.texto-image {
-  font-size: 24px;
-  color: #000000;
-  font: bold;
-  font-weight: 700;
-  text-align: center;
-}
-
-.formbold-btn {
-  font-size: 16px;
-  border-radius: 5px;
-  padding: 12px 25px;
-  border: none;
-  font-weight: 700;
-  background-color: #000000;
-  color: white;
-  cursor: pointer;
-  margin: 20px auto;
-  display: block
-}
-
-.formbold-btn:hover {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-} */
-
-.background {
-  background-image: url('https://images.pexels.com/photos/14021051/pexels-photo-14021051.jpeg?q=50');
-  background-size: cover;
-  background-position: center;
-  height: 100%;
+#myVideo {
   width: 100%;
 }
 
-/*Gambiarra*/
-.round-div {
-  background-color: #f8f8f8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
+#text {
+  text-align: center;
   justify-content: center;
-}
-
-.round-div img {
-  max-width: 100%;
-  border-radius: 50%;
-}
-
-/**/
-
-.info-container {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.377);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 10%;
   border-radius: 10px;
-  text-align: center;
-  max-width: 50%;
-  margin: 0 auto;
+  width: 60%;
+  height: 70%;
+}
+
+.title p,
+.title-equipe h4,
+ul {
+
+  font-size: 15px;
+}
+
+.logo {
   margin-top: 10%;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.logo-container {
-  backdrop-filter: blur(5px);
-  max-width: 20%;
-  border-radius: 30px;
-  margin: 0 auto;
-  margin-top: 0.5%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-
+h4 {
+  font-weight: 600;
 }
 
-.logo-container img {
-  width: 60px;
-  margin-right: 10px;
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
 }
 
-
-@media (max-width: 768px) {
-  .info-container {
-    max-width: 80%;
-    margin-top: 22%;
-  }
-
-  .logo-container {
-    max-width: 100%;
-  }
+ul p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: lighter;
 }
