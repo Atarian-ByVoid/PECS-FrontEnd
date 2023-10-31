@@ -1,5 +1,5 @@
 .background {
-  background-image: url('https://images.pexels.com/photos/14021051/pexels-photo-14021051.jpeg?q=50');
+  background-image: url('/assets/background/mountain.jpg');
   background-size: cover;
   background-position: center;
   height: 100%;

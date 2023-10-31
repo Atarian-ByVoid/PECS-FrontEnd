@@ -16,6 +16,12 @@ export class MeuPerfilComponent implements OnInit {
   userInfo: any = null;
   user: any;
   editing: boolean = false;
+  userProfileFields: { key: string; label: string }[] = [
+    { key: 'name', label: 'Name' },
+    { key: 'telefone', label: 'Phone' },
+    { key: 'email', label: 'Email' },
+    { key: 'username', label: 'Username' },
+  ];
 
   ngOnInit() {
     const userId = this.authService.getUserId();
@@ -32,6 +38,7 @@ export class MeuPerfilComponent implements OnInit {
   toggleEditing() {
     this.editing = !this.editing;
   }
+
   isEditableField(key: string): boolean {
     return (
       key === 'nome' ||
