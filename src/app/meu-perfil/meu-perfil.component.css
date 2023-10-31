@@ -1,4 +1,4 @@
-.user-info {
+/* .user-info {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   padding: 20px;
@@ -59,4 +59,90 @@
     height: 100px;
   }
 
+} */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 16px;
+  color: #777;
+}
+
+.profile-details {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-details li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.profile-details li strong {
+  color: #333;
+  margin-right: 5px;
+}
+
+.profile-details li:last-child {
+  margin-bottom: 0;
+} */
+
+.container {
+  margin-top: 10em;
+}
+
+.my-profile.card {
+  border-radius: 10px;
+}
+
+.my-profile.card .card-header .profile_img {
+
+  object-fit: cover;
+  margin: 10px auto;
+  border: 10px solid #ccc;
+  border-radius: 50%;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+.my-profile.card p {
+  font-size: 16px;
+  color: #000;
+}
+
+.my-profile.table th,
+.my-profile.table td {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #000;
 }

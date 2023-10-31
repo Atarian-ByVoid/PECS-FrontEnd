@@ -5,9 +5,19 @@
 html,
 body {
   height: 100%;
-}
-
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #000000;
+}
+
+html ::-webkit-scrollbar-track {
+  background: #ededed;
 }

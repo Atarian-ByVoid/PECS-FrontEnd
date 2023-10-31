@@ -9,6 +9,7 @@ import { CadastroService } from './cadastro.service';
   styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
+  agreeTerms: boolean = false;
   constructor(
     private cadastroService: CadastroService,
     private router: Router,
@@ -24,18 +25,12 @@ export class CadastroComponent {
     telefone: '',
     dataNascimento: new Date().toISOString(),
     username: '',
-    // cpf: '',
-    // rg: '',
-    // logradouro: '',
-    // uf: '',
-    // bairro: '',
-    // cidade: '',
-    // generoSelecionado: Genero.FEMININO,
   };
 
   mensagensDeErro = {
     email: 'E-mail é obrigatório e deve ser um e-mail válido.',
     senha: 'Senha é obrigatória.',
+    nome: 'nome é obrigatório .',
   };
 
   registrar() {
@@ -51,13 +46,6 @@ export class CadastroComponent {
             telefone: '',
             dataNascimento: new Date().toISOString(),
             username: '',
-            // cpf: '',
-            // rg: '',
-            // logradouro: '',
-            // uf: '',
-            // bairro: '',
-            // cidade: '',
-            // generoSelecionado: Genero.FEMININO,
           };
 
           this.router.navigate(['']);
